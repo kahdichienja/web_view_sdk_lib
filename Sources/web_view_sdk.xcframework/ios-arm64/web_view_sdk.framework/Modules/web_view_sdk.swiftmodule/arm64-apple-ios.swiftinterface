@@ -5,11 +5,16 @@
 import Foundation
 import Swift
 import SwiftUI
+import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import _WebKit_SwiftUI
+@_hasMissingDesignatedInitializers public class WebViewSDK {
+  public static func logString(for string: Swift.String)
+  @objc deinit
+}
 @_Concurrency.MainActor @preconcurrency public struct SecureWebView : SwiftUI.UIViewRepresentable {
   @_Concurrency.MainActor @preconcurrency public init(whitelistedURL: Foundation.URL)
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: web_view_sdk.SecureWebView.Context) -> WebKit.WKWebView
@@ -22,10 +27,6 @@ import _WebKit_SwiftUI
   }
   public typealias Body = Swift.Never
   public typealias UIViewType = WebKit.WKWebView
-}
-@_hasMissingDesignatedInitializers public class WebViewSDK {
-  public static func logString(for string: Swift.String)
-  @objc deinit
 }
 extension web_view_sdk.SecureWebView : Swift.Sendable {}
 extension web_view_sdk.SecureWebView.Coordinator : Swift.Sendable {}

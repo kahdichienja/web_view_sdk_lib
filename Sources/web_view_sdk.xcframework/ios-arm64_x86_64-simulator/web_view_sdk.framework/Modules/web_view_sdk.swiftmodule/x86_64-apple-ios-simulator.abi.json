@@ -29,6 +29,73 @@
         "moduleName": "web_view_sdk"
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WebViewSDK",
+        "printedName": "WebViewSDK",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "logString",
+            "printedName": "logString(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk10WebViewSDKC9logString3forySS_tFZ",
+            "mangledName": "$s12web_view_sdk10WebViewSDKC9logString3forySS_tFZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12web_view_sdk10WebViewSDKC",
+        "mangledName": "$s12web_view_sdk10WebViewSDKC",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "SecureWebView",
         "printedName": "SecureWebView",
@@ -484,75 +551,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "web_view_sdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "WebViewSDK",
-        "printedName": "WebViewSDK",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "logString",
-            "printedName": "logString(for:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12web_view_sdk10WebViewSDKC9logString3forySS_tFZ",
-            "mangledName": "$s12web_view_sdk10WebViewSDKC9logString3forySS_tFZ",
-            "moduleName": "web_view_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:12web_view_sdk10WebViewSDKC",
-        "mangledName": "$s12web_view_sdk10WebViewSDKC",
-        "moduleName": "web_view_sdk",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       }
