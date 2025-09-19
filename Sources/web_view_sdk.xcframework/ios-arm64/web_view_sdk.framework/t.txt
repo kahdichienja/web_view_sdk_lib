@@ -1,2 +1,13 @@
+iOS archive:
 
 xcodebuild archive -scheme web_view_sdk -configuration Release -destination 'generic/platform=iOS' -archivePath './build/web_view_sdk.framework-iphoneos.xcarchive' SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+
+
+iOS Simulator archive:
+
+xcodebuild archive -scheme web_view_sdk -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath './build/web_view_sdk.framework-iphonesimulator.xcarchive' SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
+
+
+Bundle both frameworks:
+
+xcodebuild -create-xcframework -framework './build/web_view_sdk.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/web_view_sdk.framework' -framework './build/web_view_sdk.framework-iphoneos.xcarchive/Products/Library/Frameworks/web_view_sdk.framework' -output './web_view_sdk.xcframework'
