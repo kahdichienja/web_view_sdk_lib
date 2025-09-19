@@ -15,6 +15,8 @@ let package = Package(
             targets: ["web_view_sdk_lib"]
         ),
     ],
+
+    
     targets: [
         .target(
             name: "web_view_sdk_lib",
