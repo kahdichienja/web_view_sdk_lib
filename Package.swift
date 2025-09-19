@@ -16,16 +16,15 @@ let package = Package(
         ),
     ],
 
-    
+
     targets: [
-        .target(
+        .binaryTarget(
             name: "web_view_sdk_lib",
-            path: "Sources/web_view_sdk_lib"
+            path: "Sources/web_view_sdk.xcframework"
         ),
         .testTarget(
             name: "web_view_sdk_libTests",
             dependencies: ["web_view_sdk_lib"]
-        ),
-//        .binaryTarget(name: "web_view_sdk_lib", path: "./Sources/web_view_sdk_lib.xcframework")
+        )
     ]
 )
