@@ -36,6 +36,13 @@
         "moduleName": "web_view_sdk"
       },
       {
+        "kind": "Import",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
         "kind": "TypeDecl",
         "name": "WebViewSDK",
         "printedName": "WebViewSDK",
@@ -137,9 +144,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
               },
               {
                 "kind": "TypeNominal",
@@ -157,8 +164,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12web_view_sdk13SecureWebViewV10makeUIView7contextSo05WKWebF0C7SwiftUI0H20RepresentableContextVyACG_tF",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV10makeUIView7contextSo05WKWebF0C7SwiftUI0H20RepresentableContextVyACG_tF",
+            "usr": "s:12web_view_sdk13SecureWebViewV10makeUIView7contextSo0H0C7SwiftUI0H20RepresentableContextVyACG_tF",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV10makeUIView7contextSo0H0C7SwiftUI0H20RepresentableContextVyACG_tF",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -180,9 +187,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "WKWebView",
-                "printedName": "WebKit.WKWebView",
-                "usr": "c:objc(cs)WKWebView"
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
               },
               {
                 "kind": "TypeNominal",
@@ -200,8 +207,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12web_view_sdk13SecureWebViewV12updateUIView_7contextySo05WKWebF0C_7SwiftUI0H20RepresentableContextVyACGtF",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV12updateUIView_7contextySo05WKWebF0C_7SwiftUI0H20RepresentableContextVyACGtF",
+            "usr": "s:12web_view_sdk13SecureWebViewV12updateUIView_7contextySo0H0C_7SwiftUI0H20RepresentableContextVyACGtF",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV12updateUIView_7contextySo0H0C_7SwiftUI0H20RepresentableContextVyACGtF",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -505,9 +512,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "WKWebView",
-                    "printedName": "WebKit.WKWebView",
-                    "usr": "c:objc(cs)WKWebView"
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
                   }
                 ]
               },
