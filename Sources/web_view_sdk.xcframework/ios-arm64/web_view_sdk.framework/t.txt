@@ -1,0 +1,2 @@
+
+xcodebuild archive -scheme web_view_sdk -configuration Release -destination 'generic/platform=iOS' -archivePath './build/web_view_sdk.framework-iphoneos.xcarchive' SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
