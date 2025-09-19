@@ -16,7 +16,6 @@ let package = Package(
         ),
     ],
 
-
     targets: [
         .binaryTarget(
             name: "web_view_sdk_lib",
