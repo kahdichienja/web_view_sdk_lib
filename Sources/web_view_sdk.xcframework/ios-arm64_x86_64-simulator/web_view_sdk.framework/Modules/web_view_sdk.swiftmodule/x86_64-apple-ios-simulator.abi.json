@@ -110,7 +110,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(whitelistedURL:)",
+            "printedName": "init(whitelistedURL:customCSP:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -123,11 +123,26 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk13SecureWebViewV14whitelistedURLAC10Foundation0H0V_tcfc",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV14whitelistedURLAC10Foundation0H0V_tcfc",
+            "usr": "s:12web_view_sdk13SecureWebViewV14whitelistedURL9customCSPAC10Foundation0H0V_SSSgtcfc",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV14whitelistedURL9customCSPAC10Foundation0H0V_SSSgtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -348,6 +363,57 @@
                 "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So20WKNavigationResponseCySo0noI0VctF",
                 "moduleName": "web_view_sdk",
                 "objc_name": "webView:decidePolicyForNavigationResponse:decisionHandler:",
+                "declAttributes": [
+                  "ObjC",
+                  "Preconcurrency",
+                  "Custom",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "webView",
+                "printedName": "webView(_:didFailProvisionalNavigation:withError:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKWebView",
+                    "printedName": "WebKit.WKWebView",
+                    "usr": "c:objc(cs)WKWebView"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "WebKit.WKNavigation?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WKNavigation",
+                        "printedName": "WebKit.WKNavigation",
+                        "usr": "c:objc(cs)WKNavigation"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_28didFailProvisionalNavigation9withErrorySo05WKWebF0C_So12WKNavigationCSgs0M0_ptF",
+                "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_28didFailProvisionalNavigation9withErrorySo05WKWebF0C_So12WKNavigationCSgs0M0_ptF",
+                "moduleName": "web_view_sdk",
+                "objc_name": "webView:didFailProvisionalNavigation:withError:",
                 "declAttributes": [
                   "ObjC",
                   "Preconcurrency",

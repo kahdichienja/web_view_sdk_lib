@@ -17,13 +17,18 @@ import _WebKit_SwiftUI
   @objc deinit
 }
 @_Concurrency.MainActor @preconcurrency public struct SecureWebView : SwiftUI.UIViewRepresentable {
-  @_Concurrency.MainActor @preconcurrency public init(whitelistedURL: Foundation.URL)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(whitelistedURL: Foundation.URL, customCSP: Swift.String? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: web_view_sdk.SecureWebView.Context) -> UIKit.UIView
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: web_view_sdk.SecureWebView.Context)
   @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> web_view_sdk.SecureWebView.Coordinator
   @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Coordinator : ObjectiveC.NSObject, WebKit.WKNavigationDelegate {
     @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
     @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor response: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+    #endif
     @objc deinit
   }
   public typealias Body = Swift.Never
