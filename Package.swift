@@ -16,12 +16,14 @@ let package = Package(
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "web_view_sdk_lib",
+            path: "Sources/web_view_sdk_lib"
+        ),
         .testTarget(
             name: "web_view_sdk_libTests",
             dependencies: ["web_view_sdk_lib"]
         ),
-        .binaryTarget(name: "web_view_sdk_lib", path: "./Sources/web_view_sdk_lib.xcframework")
+//        .binaryTarget(name: "web_view_sdk_lib", path: "./Sources/web_view_sdk_lib.xcframework")
     ]
 )
