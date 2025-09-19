@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "web_view_sdk_lib",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -22,5 +25,6 @@ let package = Package(
             name: "web_view_sdk_libTests",
             dependencies: ["web_view_sdk_lib"]
         ),
+        .binaryTarget(name: "web_view_sdk_lib", path: "./Sources/web_view_sdk_lib.xcframework")
     ]
 )
