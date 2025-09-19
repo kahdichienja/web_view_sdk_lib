@@ -11,3 +11,5 @@ xcodebuild archive -scheme web_view_sdk -configuration Release -destination 'gen
 Bundle both frameworks:
 
 xcodebuild -create-xcframework -framework './build/web_view_sdk.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/web_view_sdk.framework' -framework './build/web_view_sdk.framework-iphoneos.xcarchive/Products/Library/Frameworks/web_view_sdk.framework' -output './web_view_sdk.xcframework'
+
+drag and drop the Bundle to lib, then add file to git, create tag the push to remote
