@@ -4,10 +4,28 @@
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 import Swift
+import SwiftUI
+import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import _WebKit_SwiftUI
+@_Concurrency.MainActor @preconcurrency public struct SecureWebView : SwiftUI.UIViewRepresentable {
+  @_Concurrency.MainActor @preconcurrency public init(whitelistedURL: Foundation.URL)
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: web_view_sdk.SecureWebView.Context) -> WebKit.WKWebView
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ webView: WebKit.WKWebView, context: web_view_sdk.SecureWebView.Context)
+  @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> web_view_sdk.SecureWebView.Coordinator
+  @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Coordinator : ObjectiveC.NSObject, WebKit.WKNavigationDelegate {
+    @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+    @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor response: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+    @objc deinit
+  }
+  public typealias Body = Swift.Never
+  public typealias UIViewType = WebKit.WKWebView
+}
 @_hasMissingDesignatedInitializers public class WebViewSDK {
   public static func logString(for string: Swift.String)
   @objc deinit
 }
+extension web_view_sdk.SecureWebView : Swift.Sendable {}
+extension web_view_sdk.SecureWebView.Coordinator : Swift.Sendable {}

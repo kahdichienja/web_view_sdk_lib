@@ -15,6 +15,489 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureWebView",
+        "printedName": "SecureWebView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(whitelistedURL:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureWebView",
+                "printedName": "web_view_sdk.SecureWebView",
+                "usr": "s:12web_view_sdk13SecureWebViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12web_view_sdk13SecureWebViewV14whitelistedURLAC10Foundation0H0V_tcfc",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV14whitelistedURLAC10Foundation0H0V_tcfc",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "makeUIView",
+            "printedName": "makeUIView(context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewRepresentableContext",
+                "printedName": "SwiftUI.UIViewRepresentableContext<web_view_sdk.SecureWebView>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureWebView",
+                    "printedName": "web_view_sdk.SecureWebView",
+                    "usr": "s:12web_view_sdk13SecureWebViewV"
+                  }
+                ],
+                "usr": "s:7SwiftUI26UIViewRepresentableContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk13SecureWebViewV10makeUIView7contextSo05WKWebF0C7SwiftUI0H20RepresentableContextVyACG_tF",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV10makeUIView7contextSo05WKWebF0C7SwiftUI0H20RepresentableContextVyACG_tF",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateUIView",
+            "printedName": "updateUIView(_:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewRepresentableContext",
+                "printedName": "SwiftUI.UIViewRepresentableContext<web_view_sdk.SecureWebView>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureWebView",
+                    "printedName": "web_view_sdk.SecureWebView",
+                    "usr": "s:12web_view_sdk13SecureWebViewV"
+                  }
+                ],
+                "usr": "s:7SwiftUI26UIViewRepresentableContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk13SecureWebViewV12updateUIView_7contextySo05WKWebF0C_7SwiftUI0H20RepresentableContextVyACGtF",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV12updateUIView_7contextySo05WKWebF0C_7SwiftUI0H20RepresentableContextVyACGtF",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeCoordinator",
+            "printedName": "makeCoordinator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Coordinator",
+                "printedName": "web_view_sdk.SecureWebView.Coordinator",
+                "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk13SecureWebViewV15makeCoordinatorAC0H0CyF",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV15makeCoordinatorAC0H0CyF",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Coordinator",
+            "printedName": "Coordinator",
+            "children": [
+              {
+                "kind": "Function",
+                "name": "webView",
+                "printedName": "webView(_:decidePolicyFor:decisionHandler:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKWebView",
+                    "printedName": "WebKit.WKWebView",
+                    "usr": "c:objc(cs)WKWebView"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKNavigationAction",
+                    "printedName": "WebKit.WKNavigationAction",
+                    "usr": "c:objc(cs)WKNavigationAction"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(WebKit.WKNavigationActionPolicy) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WKNavigationActionPolicy",
+                        "printedName": "WebKit.WKNavigationActionPolicy",
+                        "usr": "c:@E@WKNavigationActionPolicy"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So18WKNavigationActionCySo0noI0VctF",
+                "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So18WKNavigationActionCySo0noI0VctF",
+                "moduleName": "web_view_sdk",
+                "objc_name": "webView:decidePolicyForNavigationAction:decisionHandler:",
+                "declAttributes": [
+                  "ObjC",
+                  "Preconcurrency",
+                  "Custom",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "webView",
+                "printedName": "webView(_:decidePolicyFor:decisionHandler:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKWebView",
+                    "printedName": "WebKit.WKWebView",
+                    "usr": "c:objc(cs)WKWebView"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKNavigationResponse",
+                    "printedName": "WebKit.WKNavigationResponse",
+                    "usr": "c:objc(cs)WKNavigationResponse"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(WebKit.WKNavigationResponsePolicy) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WKNavigationResponsePolicy",
+                        "printedName": "WebKit.WKNavigationResponsePolicy",
+                        "usr": "c:@E@WKNavigationResponsePolicy"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So20WKNavigationResponseCySo0noI0VctF",
+                "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So20WKNavigationResponseCySo0noI0VctF",
+                "moduleName": "web_view_sdk",
+                "objc_name": "webView:decidePolicyForNavigationResponse:decisionHandler:",
+                "declAttributes": [
+                  "ObjC",
+                  "Preconcurrency",
+                  "Custom",
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Coordinator",
+                    "printedName": "web_view_sdk.SecureWebView.Coordinator",
+                    "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorCAEycfc",
+                "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorCAEycfc",
+                "moduleName": "web_view_sdk",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "init",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC",
+                  "Preconcurrency",
+                  "Custom",
+                  "Override"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC"
+            ],
+            "superclassUsr": "c:objc(cs)NSObject",
+            "hasMissingDesignatedInitializers": true,
+            "superclassNames": [
+              "ObjectiveC.NSObject"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CVarArg",
+                "printedName": "CVarArg",
+                "usr": "s:s7CVarArgP",
+                "mangledName": "$ss7CVarArgP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "_KeyValueCodingAndObservingPublishing",
+                "printedName": "_KeyValueCodingAndObservingPublishing",
+                "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+                "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "_KeyValueCodingAndObserving",
+                "printedName": "_KeyValueCodingAndObserving",
+                "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+                "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12web_view_sdk13SecureWebViewV",
+        "mangledName": "$s12web_view_sdk13SecureWebViewV",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UIViewRepresentable",
+            "printedName": "UIViewRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UIViewType",
+                "printedName": "UIViewType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKWebView",
+                    "printedName": "WebKit.WKWebView",
+                    "usr": "c:objc(cs)WKWebView"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Coordinator",
+                "printedName": "Coordinator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Coordinator",
+                    "printedName": "web_view_sdk.SecureWebView.Coordinator",
+                    "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI19UIViewRepresentableP",
+            "mangledName": "$s7SwiftUI19UIViewRepresentableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "WebViewSDK",
         "printedName": "WebViewSDK",
