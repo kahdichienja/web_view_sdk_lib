@@ -121,6 +121,30 @@
       },
       {
         "kind": "Import",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Darwin",
         "printedName": "Darwin",
         "declKind": "Import",
@@ -1380,6 +1404,144 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "SecurityManager",
+        "printedName": "SecurityManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecurityManager",
+                "printedName": "web_view_sdk.SecurityManager",
+                "usr": "s:12web_view_sdk15SecurityManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12web_view_sdk15SecurityManagerC6sharedACvpZ",
+            "mangledName": "$s12web_view_sdk15SecurityManagerC6sharedACvpZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityManager",
+                    "printedName": "web_view_sdk.SecurityManager",
+                    "usr": "s:12web_view_sdk15SecurityManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12web_view_sdk15SecurityManagerC6sharedACvgZ",
+                "mangledName": "$s12web_view_sdk15SecurityManagerC6sharedACvgZ",
+                "moduleName": "web_view_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "enforceNetworkProtection",
+            "printedName": "enforceNetworkProtection()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk15SecurityManagerC24enforceNetworkProtectionyyF",
+            "mangledName": "$s12web_view_sdk15SecurityManagerC24enforceNetworkProtectionyyF",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "secureSession",
+            "printedName": "secureSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLSession",
+                "printedName": "Foundation.URLSession",
+                "usr": "c:objc(cs)NSURLSession"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk15SecurityManagerC13secureSessionSo12NSURLSessionCyF",
+            "mangledName": "$s12web_view_sdk15SecurityManagerC13secureSessionSo12NSURLSessionCyF",
+            "moduleName": "web_view_sdk",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12web_view_sdk15SecurityManagerC",
+        "mangledName": "$s12web_view_sdk15SecurityManagerC",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "WebKit",
         "printedName": "WebKit",
@@ -2001,6 +2163,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/NetworkSecurity.swift",
+      "kind": "StringLiteral",
+      "offset": 445,
+      "length": 8,
+      "value": "\"server\""
+    },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
