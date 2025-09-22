@@ -177,6 +177,4 @@ For questions or support, visit: [https://webviewsdk.dev/](https://webviewsdk.de
 
 ---
 
-If you want, I can **also create a “Copy-Paste Ready Markdown README”** that includes **screenshots of SwiftUI & UIKit examples from `/example`**, making it truly consumer-ready like your Biometric SDK doc.
-
-Do you want me to do that next?
+ 
