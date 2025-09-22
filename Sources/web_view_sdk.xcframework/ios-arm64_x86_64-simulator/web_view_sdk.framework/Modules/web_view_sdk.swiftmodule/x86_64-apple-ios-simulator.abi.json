@@ -1070,6 +1070,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "UITraitChangeObservable",
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
@@ -2356,9 +2370,135 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
       "kind": "FloatLiteral",
-      "offset": 1424,
+      "offset": 1478,
       "length": 3,
       "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1566,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1576,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1588,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1599,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 2137,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2226,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 2334,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2373,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2415,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2452,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2521,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2707,
+      "length": 3,
+      "value": "-40"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2864,
+      "length": 3,
+      "value": "250"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 2918,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 2968,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 3031,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "Array",
+      "offset": 3062,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 3115,
+      "length": 3,
+      "value": "0.0"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/NetworkSecurity.swift",
