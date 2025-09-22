@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         // Create SwiftUI SecureWebView
         let secureWebView = SecureWebView(
             whitelistedURL: URL(string: "https://www.pexels.com")!,
-            customCSP: csp
+            customCSP: csp,
+            
         )
         
         // Wrap it in a UIHostingController

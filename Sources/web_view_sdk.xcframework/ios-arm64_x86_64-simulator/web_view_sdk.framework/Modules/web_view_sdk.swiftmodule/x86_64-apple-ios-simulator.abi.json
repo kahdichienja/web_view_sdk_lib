@@ -678,7 +678,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(whitelistedURL:customCSP:)",
+            "printedName": "init(whitelistedURL:customCSP:testMode:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -706,11 +706,18 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSPAC10Foundation0I0V_SSSgtcfc",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSPAC10Foundation0I0V_SSSgtcfc",
+            "usr": "s:12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP8testModeAC10Foundation0I0V_SSSgSbtcfc",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP8testModeAC10Foundation0I0V_SSSgSbtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -2197,7 +2204,14 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 6665,
+      "offset": 766,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6473,
       "length": 5,
       "value": "false"
     },
