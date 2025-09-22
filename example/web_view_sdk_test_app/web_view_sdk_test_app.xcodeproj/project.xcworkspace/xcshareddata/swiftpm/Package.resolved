@@ -1,0 +1,15 @@
+{
+  "originHash" : "9fac8a106e07efd68d58dafe09978cf02932b50b8a1380d6d1418fc2a4dbb775",
+  "pins" : [
+    {
+      "identity" : "web_view_sdk_lib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kahdichienja/web_view_sdk_lib.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "29138af6ef1ae902234d17a7e724046b5f219fe0"
+      }
+    }
+  ],
+  "version" : 3
+}
