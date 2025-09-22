@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45B7DA9E2E81AC2200070C31 /* web_view_sdk_lib in Frameworks */ = {isa = PBXBuildFile; productRef = 45B7DA9D2E81AC2200070C31 /* web_view_sdk_lib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		45B7DA802E81A4A800070C31 /* web_view_sdk_test_app_uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = web_view_sdk_test_app_uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B7DA9E2E81AC2200070C31 /* web_view_sdk_lib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = web_view_sdk_test_app_uikit;
 			packageProductDependencies = (
+				45B7DA9D2E81AC2200070C31 /* web_view_sdk_lib */,
 			);
 			productName = web_view_sdk_test_app_uikit;
 			productReference = 45B7DA802E81A4A800070C31 /* web_view_sdk_test_app_uikit.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 45B7DA772E81A4A800070C31;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				45B7DA9C2E81AC2200070C31 /* XCRemoteSwiftPackageReference "web_view_sdk_lib" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 45B7DA812E81A4A800070C31 /* Products */;
 			projectDirPath = "";
@@ -345,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45B7DA9C2E81AC2200070C31 /* XCRemoteSwiftPackageReference "web_view_sdk_lib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kahdichienja/web_view_sdk_lib.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45B7DA9D2E81AC2200070C31 /* web_view_sdk_lib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45B7DA9C2E81AC2200070C31 /* XCRemoteSwiftPackageReference "web_view_sdk_lib" */;
+			productName = web_view_sdk_lib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45B7DA782E81A4A800070C31 /* Project object */;
 }
