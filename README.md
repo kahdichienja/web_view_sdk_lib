@@ -2,17 +2,37 @@
 
 ---
 
-# WebViewSDK Integration Guide
+# WebViewSDK Integration Guide (iOS)
 
-Repository: [https://github.com/pretty128guydev/ios-sdk.git](https://github.com/pretty128guydev/ios-sdk.git)
-
-This guide covers how to integrate **WebViewSDK** into SwiftUI and UIKit apps, including dev/test modes, Content Security Policy (CSP), and environment/network anomaly checks.
+This guide provides a step-by-step walkthrough for integrating the **WebViewSDK** into your iOS project. This SDK provides a secure `WKWebView` wrapper with built-in security checks, Content Security Policy enforcement, and optional dev/test modes.
 
 ---
 
-## 1️⃣ Add SDK to Your Project
+## 📦 SDK Contents Overview
 
-1. Open Xcode → **File → Add Packages**
+* **SecureWebView**: SwiftUI `View` wrapper around `WKWebView` with security checks.
+* **SecureWebViewController**: Programmatic `UIViewController` for UIKit apps.
+* **SecureWebViewContainer**: Storyboard-friendly `UIView` wrapper.
+* **SecurityManager**: Checks for network anomalies (VPN/Proxy).
+* **RuntimeEnvironmentProtection**: Detects suspicious environments (simulator, debugger, etc.).
+* **WebViewSDK**: Static logging and warning utilities.
+
+---
+
+## 📱 Requirements & SDK Info
+
+* **iOS Deployment Target**: 13.0+ (UIKit & SwiftUI)
+* **Swift Version**: 5+
+* **Dependencies**: None external (pure Swift + WebKit)
+* **Required Features**: Internet access
+
+---
+
+## 🚀 1. Adding the SDK to Your Project
+
+Add the SDK via **Swift Package Manager**:
+
+1. In Xcode → **File → Add Packages**
 2. Enter the repository URL:
 
 ```
@@ -20,49 +40,35 @@ https://github.com/pretty128guydev/ios-sdk.git
 ```
 
 3. Choose the `main` branch.
-
----
-
-## 2️⃣ Import the SDK
+4. Import it in your Swift files:
 
 ```swift
-import SwiftUI
 import web_view_sdk
 ```
 
 ---
 
-## 3️⃣ SwiftUI Integration
+## 🏗 2. SwiftUI Integration
 
-`SecureWebView` is a **UIViewRepresentable** wrapper around `WKWebView` with built-in security checks:
-
-* **Whitelist URL only**
-* **Optional custom CSP**
-* **Network & environment anomaly detection**
-* **Dev/test mode** to display warnings without crashing
-
-### Basic SwiftUI Setup
+`SecureWebView` is the recommended approach for SwiftUI apps.
 
 ```swift
-struct ContentView: View {
+import SwiftUI
+import web_view_sdk
 
+struct ContentView: View {
     let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
 
     var body: some View {
         SecureWebView(
             whitelistedURL: URL(string: "https://www.pexels.com")!,
             customCSP: csp,
-            testMode: true      // ⚠️ Enable warnings in dev mode
+            testMode: true  // ⚠️ Display warnings instead of terminating
         )
         .ignoresSafeArea(edges: .all)
         .onAppear {
-            log("View did appear")
+            WebViewSDK.logString(for: "SecureWebView appeared")
         }
-    }
-
-    func log(_ message: String) {
-        print("[ContentView] \(message)")
-        WebViewSDK.logString(for: message)
     }
 }
 
@@ -71,16 +77,18 @@ struct ContentView: View {
 }
 ```
 
-### Dev/Test Mode Behavior
+### 🔧 Test Mode vs Production
 
-* `testMode = true` → shows warnings for network, environment, or URL issues **without terminating**.
-* `testMode = false` → critical anomalies terminate the web view load.
+| Mode               | Behavior                                                                |
+| ------------------ | ----------------------------------------------------------------------- |
+| `testMode = true`  | Shows warnings for network, environment, or URL issues without crashing |
+| `testMode = false` | Critical anomalies terminate the web view load                          |
 
 ---
 
-## 4️⃣ UIKit Integration
+## 🖥 3. UIKit Integration
 
-You can embed `SecureWebView` inside a `UIViewController` via `UIHostingController`:
+You can use `SecureWebViewController` or embed `SecureWebView` via a `UIHostingController`.
 
 ```swift
 import UIKit
@@ -88,28 +96,22 @@ import SwiftUI
 import web_view_sdk
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
 
-        // Create SwiftUI SecureWebView
         let secureWebView = SecureWebView(
             whitelistedURL: URL(string: "https://www.pexels.com")!,
             customCSP: csp,
             testMode: true
         )
 
-        // Wrap it in UIHostingController
         let hostingController = UIHostingController(rootView: secureWebView)
-
-        // Add as child VC
         addChild(hostingController)
         view.addSubview(hostingController.view)
         hostingController.didMove(toParent: self)
 
-        // Fill parent view
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
@@ -125,48 +127,56 @@ class ViewController: UIViewController {
 
 ---
 
-## 5️⃣ Security & Environment Checks
+## 🔐 4. Security & Environment Checks
 
-`SecureWebView` automatically checks:
+WebViewSDK automatically validates:
 
-1. **Runtime environment** → blocks SDK if suspicious (e.g., simulator, debugger)
-2. **Network anomalies** → VPN or proxy detection
-3. **URL validation** → only allows HTTP/HTTPS schemes
-4. **Host reachability** → ensures the host is reachable
-5. **URL reachability** → ensures the page can be loaded
+1. **Runtime environment**: Detects simulator, debugger, or jailbroken devices.
+2. **Network anomalies**: VPN or proxy detection.
+3. **URL validation**: Only HTTP/HTTPS schemes allowed.
+4. **Host reachability**: Ensures the host is reachable.
+5. **URL reachability**: Ensures the page can be loaded.
 
-> In dev/test mode, warnings are displayed via `WebViewSDK.showWarning()` instead of terminating.
-
----
-
-## 6️⃣ Quick Start
-
-Check the `/example` folder in the repo for ready-to-run examples:
-
-* **SwiftUI Example:** `/example/web_view_sdk_test_app`
-* **UIKit Example:** `/example/web_view_sdk_test_app_uikit`
-
-> Both demonstrate CSP setup, test mode, and logging.
+> In **dev/test mode**, warnings are shown using `WebViewSDK.showWarning()` instead of terminating the web view.
 
 ---
 
-## 7️⃣ Logging & Debugging
+## ⚡ 5. Logging & Debugging
 
-`WebViewSDK.logString(for:)` logs messages for diagnostics.
-
-Example:
+Use `WebViewSDK.logString(for:)` to log warnings or debug messages:
 
 ```swift
-WebViewSDK.logString(for: "Custom debug message")
+WebViewSDK.logString(for: "Debug: Page loaded successfully")
+WebViewSDK.showWarning("⚠️ Warning: VPN detected in test mode")
 ```
 
-* Useful in test mode to monitor environment/network checks
-* Automatically logs errors and warnings
+---
+
+## ✅ 6. Quick Start Examples
+
+* **SwiftUI**: `/example/web_view_sdk_test_app`
+* **UIKit**: `/example/web_view_sdk_test_app_uikit`
+
+These demonstrate CSP setup, `testMode`, and logging.
 
 ---
 
-This guide gives **full SwiftUI + UIKit integration**, dev/test modes, and all security checks enabled.
+## 🧑‍💻 7. Best Practices
+
+* Only whitelist URLs that your app should load.
+* Use **testMode** in development to show warnings instead of crashing.
+* Always log anomalies for audit and diagnostics.
+* Keep CSP updated to block untrusted sources.
+* Do not disable security checks in production builds.
 
 ---
 
- 
+## 📞 Support
+
+For questions or support, visit: [https://webviewsdk.dev/](https://webviewsdk.dev/)
+
+---
+
+If you want, I can **also create a “Copy-Paste Ready Markdown README”** that includes **screenshots of SwiftUI & UIKit examples from `/example`**, making it truly consumer-ready like your Biometric SDK doc.
+
+Do you want me to do that next?
