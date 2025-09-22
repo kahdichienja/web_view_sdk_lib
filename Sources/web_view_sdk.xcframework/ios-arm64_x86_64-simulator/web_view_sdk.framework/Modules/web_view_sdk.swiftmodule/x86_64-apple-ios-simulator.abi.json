@@ -16,6 +16,158 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InternetSpeedChecker",
+        "printedName": "InternetSpeedChecker",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "checkSpeed",
+            "printedName": "checkSpeed(url:thresholdKbps:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "hasDefaultArg": true,
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk20InternetSpeedCheckerC05checkE03url13thresholdKbps10completiony10Foundation3URLV_SdySbctFZ",
+            "mangledName": "$s12web_view_sdk20InternetSpeedCheckerC05checkE03url13thresholdKbps10completiony10Foundation3URLV_SdySbctFZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showToast",
+            "printedName": "showToast(message:in:duration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk20InternetSpeedCheckerC9showToast7message2in8durationySS_So6UIViewCSdtFZ",
+            "mangledName": "$s12web_view_sdk20InternetSpeedCheckerC9showToast7message2in8durationySS_So6UIViewCSdtFZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12web_view_sdk20InternetSpeedCheckerC",
+        "mangledName": "$s12web_view_sdk20InternetSpeedCheckerC",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SystemConfiguration",
         "printedName": "SystemConfiguration",
         "declKind": "Import",
@@ -2188,6 +2340,27 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 526,
+      "length": 36,
+      "value": "\"https:\/\/www.google.com\/favicon.ico\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 624,
+      "length": 5,
+      "value": "150.0"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
+      "kind": "FloatLiteral",
+      "offset": 1424,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/NetworkSecurity.swift",
       "kind": "StringLiteral",
       "offset": 445,
@@ -2211,7 +2384,7 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 6473,
+      "offset": 7562,
       "length": 5,
       "value": "false"
     },

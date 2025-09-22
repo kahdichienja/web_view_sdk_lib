@@ -15,6 +15,11 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import _WebKit_SwiftUI
+@_hasMissingDesignatedInitializers public class InternetSpeedChecker {
+  public static func checkSpeed(url: Foundation.URL = URL(string: "https://www.google.com/favicon.ico")!, thresholdKbps: Swift.Double = 150.0, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public static func showToast(message: Swift.String, in view: UIKit.UIView, duration: Swift.Double = 2.0)
+  @objc deinit
+}
 public struct NetworkReachability {
   public static func isHostReachable(_ host: Swift.String) -> Swift.Bool
   public static func isURLReachable(_ url: Foundation.URL) -> Swift.Bool
