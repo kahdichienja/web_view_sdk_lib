@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         let secureWebView = SecureWebView(
             whitelistedURL: URL(string: "https://www.pexels.com")!,
             customCSP: csp,
+            testMode: true
             
         )
         

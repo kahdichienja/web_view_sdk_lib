@@ -18,7 +18,7 @@ struct ContentView: View {
         SecureWebView(
             whitelistedURL: URL(string: "https://www.pexels.com")!,
             customCSP: csp,
-            testMode: false,
+            testMode: true,
             
         )
         .ignoresSafeArea(edges:.all)
