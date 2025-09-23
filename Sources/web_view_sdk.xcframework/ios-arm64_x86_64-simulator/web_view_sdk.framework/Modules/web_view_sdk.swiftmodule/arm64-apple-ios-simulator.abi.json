@@ -9,6 +9,165 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "web_view_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AllowedDomains",
+        "printedName": "AllowedDomains",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "domains",
+            "printedName": "domains",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12web_view_sdk14AllowedDomainsO7domainsSaySSGvpZ",
+            "mangledName": "$s12web_view_sdk14AllowedDomainsO7domainsSaySSGvpZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12web_view_sdk14AllowedDomainsO7domainsSaySSGvgZ",
+                "mangledName": "$s12web_view_sdk14AllowedDomainsO7domainsSaySSGvgZ",
+                "moduleName": "web_view_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "isAllowed",
+            "printedName": "isAllowed(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk14AllowedDomainsO02isD03urlSb10Foundation3URLV_tFZ",
+            "mangledName": "$s12web_view_sdk14AllowedDomainsO02isD03urlSb10Foundation3URLV_tFZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isAllowedHost",
+            "printedName": "isAllowedHost(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12web_view_sdk14AllowedDomainsO02isD4HostySbSSFZ",
+            "mangledName": "$s12web_view_sdk14AllowedDomainsO02isD4HostySbSSFZ",
+            "moduleName": "web_view_sdk",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12web_view_sdk14AllowedDomainsO",
+        "mangledName": "$s12web_view_sdk14AllowedDomainsO",
+        "moduleName": "web_view_sdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "web_view_sdk",
         "declAttributes": [
           "RawDocComment"
@@ -2354,6 +2513,13 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/AllowedDomains.swift",
+      "kind": "Array",
+      "offset": 157,
+      "length": 58,
+      "value": "[\"biometric.vision\", \"biometric.kz\"]"
+    },
+    {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/InternetSpeedChecker.swift",
       "kind": "StringLiteral",
       "offset": 526,
@@ -2524,14 +2690,14 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 7562,
+      "offset": 7035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1821,
+      "offset": 1820,
       "length": 5,
       "value": "false"
     }
