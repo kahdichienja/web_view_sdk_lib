@@ -61,7 +61,7 @@ struct ContentView: View {
 
     var body: some View {
         SecureWebView(
-            whitelistedURL: URL(string: "https://www.pexels.com")!,
+            whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
             testMode: true  // ⚠️ Display warnings instead of terminating
         )
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
 
         let secureWebView = SecureWebView(
-            whitelistedURL: URL(string: "https://www.pexels.com")!,
+            whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
             testMode: true
         )

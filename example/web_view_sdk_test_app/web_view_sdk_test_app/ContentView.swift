@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         SecureWebView(
-            whitelistedURL: URL(string: "https://www.pexels.com")!,
+            whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
             testMode: true,
             

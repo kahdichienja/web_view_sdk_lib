@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         // Create SwiftUI SecureWebView
         let secureWebView = SecureWebView(
-            whitelistedURL: URL(string: "https://www.pexels.com")!,
+            whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
             testMode: true
             
