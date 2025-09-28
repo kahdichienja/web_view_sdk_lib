@@ -117,7 +117,7 @@ class ViewController: UIViewController {
             expectedPackageName: "com.example.web_view_sdk_test_app",
             supportedAlternativeStores: [],
             isProd: false,   // ⚠️ Use true in production
-            apiKey: "Rv7MCdaiaLc5plgOOvmunOfsqNyiHzSTvrYVJ45G7P7XH2Y",
+            apiKey: "<YOU_API_KEY>",
             onSuccess: { didSucceed in
                 if didSucceed {
                     print("✅ UIKit flow succeeded")
