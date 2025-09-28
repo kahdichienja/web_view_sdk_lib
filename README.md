@@ -69,7 +69,7 @@ struct ContentView: View {
         SecureWebView(
             whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
-            isProd: true  // ⚠️ Display warnings instead of terminating
+            isProd: false  // ⚠️ Display warnings instead of terminating
         )
         .ignoresSafeArea(edges: .all)
         .onAppear {
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
         let secureWebView = SecureWebView(
             whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
-            isProd: true
+            isProd: false
         )
 
         let hostingController = UIHostingController(rootView: secureWebView)
@@ -263,7 +263,7 @@ struct ContentView: View {
                 SecureWebView(
                     whitelistedURL: url,
                     customCSP: csp,
-                    isProd: true,
+                    isProd: false,
                     onSuccess: { didSucceed in
                         if didSucceed {
                             withAnimation { showToast = true }
