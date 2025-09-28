@@ -63,7 +63,6 @@ import SwiftUI
 import web_view_sdk
 
 struct ContentView: View {
-    let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
 
     var body: some View {
         SecureWebView(
@@ -111,7 +110,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
 
         let secureWebView = SecureWebView(
             expectedPackageName: "com.example.web_view_sdk_test_app",
@@ -242,7 +240,6 @@ WebViewSDK.showWarning("⚠️ Warning: VPN detected in test mode")
 * **SwiftUI**: `/example/web_view_sdk_test_app`
 * **UIKit**: `/example/web_view_sdk_test_app_uikit`
 
-These demonstrate CSP setup, `isProd`, and logging.
 
 ---
 
@@ -251,7 +248,6 @@ These demonstrate CSP setup, `isProd`, and logging.
 * Only whitelist URLs that your app should load.
 * Use **isProd** in development to show warnings instead of crashing.
 * Always log anomalies for audit and diagnostics.
-* Keep CSP updated to block untrusted sources.
 * Do not disable security checks in production builds.
 
 ---
@@ -272,7 +268,6 @@ import SwiftUI
 import web_view_sdk
 
 struct ContentView: View {
-    let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
 
     var body: some View {
         SecureWebView(
