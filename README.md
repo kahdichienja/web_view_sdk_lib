@@ -144,6 +144,70 @@ WebViewSDK automatically validates:
 5. **URL reachability**: Ensures the page can be loaded.
 
 > In **dev/test mode**, warnings are shown using `WebViewSDK.showWarning()` instead of terminating the web view.
+ 
+
+---
+
+## ⚠️ 5. Security Warnings
+
+The SDK performs multiple **runtime, network, and environment validations** and raises `SecurityRisk` alerts whenever a potential threat is detected.
+
+* In **production mode** (`isProd = true`), detection of any **critical** vulnerability **terminates the web view load immediately** (failing fast).
+* In **test mode** (`isProd = false`), issues are shown as **non-blocking warnings** using `WebViewSDK.showWarning()` and logged via `WebViewSDK.logString(for:)`.
+
+This allows developers to validate integration safely during testing, while enforcing strict protection in production.
+
+---
+
+### SecurityRisk Enum and Severity
+
+| Risk Type                   | Severity | Description                                                                 |
+| --------------------------- | -------- | --------------------------------------------------------------------------- |
+| `SimulatorDetected`         | CRITICAL | App is running in a simulator/emulator environment                          |
+| `DebuggerAttached`          | CRITICAL | Debugger detected at runtime                                                |
+| `JailbreakDetected`         | CRITICAL | Device is jailbroken / compromised                                          |
+| `ProxyDetected`             | WARNING  | Active proxy detected in device network settings                            |
+| `VPNDetected`               | WARNING  | Active VPN connection detected                                              |
+| `UnreachableHost`           | CRITICAL | Host server not reachable                                                   |
+| `UntrustedURL`              | CRITICAL | URL is not in the configured whitelist                                      |
+| `InvalidScheme`             | CRITICAL | Non-HTTP/HTTPS scheme detected in request                                   |
+| `TamperDetected`            | CRITICAL | SDK integrity check failed (tampering or re-signing suspected)              |
+| `ScreenRecordingDetected`   | WARNING  | Active screen recording was detected during sensitive flow                  |
+| `ScreenshotAttemptDetected` | WARNING  | Screenshot attempted during secure flow                                     |
+| `DeveloperModeDetected`     | WARNING  | iOS developer mode enabled (device is in dev/testing configuration)         |
+| `UnsupportedEnvironment`    | WARNING  | Running in unsupported environment (e.g., outdated iOS or missing features) |
+
+---
+
+### 🚦 Behavior by Mode
+
+| Mode               | Behavior                                                                  |
+| ------------------ | ------------------------------------------------------------------------- |
+| `isProd = true`  | Non-blocking warnings are logged and shown to developer via `showWarning` |
+| `isProd = false` | Critical threats terminate load; warnings may still be logged             |
+
+---
+
+### Example: Handling Warnings in SwiftUI
+
+```swift
+SecureWebView(
+    whitelistedURL: URL(string: "https://biometric.vision")!,
+    customCSP: "default-src * 'unsafe-inline' 'unsafe-eval';",
+    isProd: true
+)
+.onAppear {
+    WebViewSDK.logString(for: "SecureWebView appeared with runtime checks enabled")
+}
+```
+
+---
+
+👉 **Note**: Always run in `isProd = false` during development to surface warnings.
+Switch to `isProd = true` for production builds to enforce strict blocking on critical risks.
+
+ 
+
 
 ---
 
