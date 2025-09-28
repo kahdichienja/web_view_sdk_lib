@@ -1137,7 +1137,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(whitelistedURL:customCSP:testMode:)",
+            "printedName": "init(whitelistedURL:customCSP:isProd:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1175,8 +1175,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP8testModeAC10Foundation0I0V_SSSgSbtcfc",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP8testModeAC10Foundation0I0V_SSSgSbtcfc",
+            "usr": "s:12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP6isProdAC10Foundation0I0V_SSSgSbtcfc",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP6isProdAC10Foundation0I0V_SSSgSbtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -2331,7 +2331,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(whitelistedURL:customCSP:testMode:onSuccess:)",
+            "printedName": "init(whitelistedURL:customCSP:isProd:onSuccess:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2396,8 +2396,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk13SecureWebViewV14whitelistedURL9customCSP8testMode9onSuccessAC10Foundation0H0V_SSSgSbySbcSgtcfc",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV14whitelistedURL9customCSP8testMode9onSuccessAC10Foundation0H0V_SSSgSbySbcSgtcfc",
+            "usr": "s:12web_view_sdk13SecureWebViewV14whitelistedURL9customCSP6isProd9onSuccessAC10Foundation0H0V_SSSgSbySbcSgtcfc",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV14whitelistedURL9customCSP6isProd9onSuccessAC10Foundation0H0V_SSSgSbySbcSgtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -3071,23 +3071,23 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 4808,
-      "length": 5,
-      "value": "false"
+      "offset": 4804,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 11369,
+      "offset": 11381,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1326,
-      "length": 5,
-      "value": "false"
+      "offset": 1322,
+      "length": 4,
+      "value": "true"
     }
   ]
 }
