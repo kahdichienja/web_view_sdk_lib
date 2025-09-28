@@ -2195,6 +2195,74 @@
               {
                 "kind": "Function",
                 "name": "webView",
+                "printedName": "webView(_:requestMediaCapturePermissionFor:initiatedByFrame:type:decisionHandler:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKWebView",
+                    "printedName": "WebKit.WKWebView",
+                    "usr": "c:objc(cs)WKWebView"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKSecurityOrigin",
+                    "printedName": "WebKit.WKSecurityOrigin",
+                    "usr": "c:objc(cs)WKSecurityOrigin"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKFrameInfo",
+                    "printedName": "WebKit.WKFrameInfo",
+                    "usr": "c:objc(cs)WKFrameInfo"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKMediaCaptureType",
+                    "printedName": "WebKit.WKMediaCaptureType",
+                    "usr": "c:@E@WKMediaCaptureType"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(WebKit.WKPermissionDecision) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WKPermissionDecision",
+                        "printedName": "WebKit.WKPermissionDecision",
+                        "usr": "c:@E@WKPermissionDecision"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_32requestMediaCapturePermissionFor16initiatedByFrame4type15decisionHandlerySo05WKWebF0C_So16WKSecurityOriginCSo11WKFrameInfoCSo07WKMediaJ4TypeVySo20WKPermissionDecisionVctF",
+                "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_32requestMediaCapturePermissionFor16initiatedByFrame4type15decisionHandlerySo05WKWebF0C_So16WKSecurityOriginCSo11WKFrameInfoCSo07WKMediaJ4TypeVySo20WKPermissionDecisionVctF",
+                "moduleName": "web_view_sdk",
+                "intro_iOS": "15.0",
+                "objc_name": "webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:",
+                "declAttributes": [
+                  "ObjC",
+                  "Preconcurrency",
+                  "Custom",
+                  "AccessControl",
+                  "Available"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "webView",
                 "printedName": "webView(_:decidePolicyFor:decisionHandler:)",
                 "children": [
                   {

@@ -273,6 +273,9 @@
 				DEVELOPMENT_TEAM = W2NQM4X55L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "web-view-sdk-test-app-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to capture photos and video during calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses your microphone for audio during calls.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +308,9 @@
 				DEVELOPMENT_TEAM = W2NQM4X55L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "web-view-sdk-test-app-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to capture photos and video during calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses your microphone for audio during calls.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
