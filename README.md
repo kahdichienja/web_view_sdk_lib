@@ -67,9 +67,15 @@ struct ContentView: View {
 
     var body: some View {
         SecureWebView(
-            whitelistedURL: URL(string: "https://biometric.vision")!,
-            customCSP: csp,
-            isProd: false  // ⚠️ Display warnings instead of terminating
+            expectedPackageName: "com.example.web_view_sdk_test_app",
+            supportedAlternativeStores: [],
+            isProd: false,   // ⚠️ Use true in production
+            apiKey: "<YOU_API_KEY>",
+            onSuccess: { didSucceed in
+                if didSucceed {
+                    print("✅ SwiftUI flow succeeded")
+                }
+            }
         )
         .ignoresSafeArea(edges: .all)
         .onAppear {
