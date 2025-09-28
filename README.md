@@ -69,7 +69,7 @@ struct ContentView: View {
         SecureWebView(
             whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
-            testMode: true  // ⚠️ Display warnings instead of terminating
+            isProd: true  // ⚠️ Display warnings instead of terminating
         )
         .ignoresSafeArea(edges: .all)
         .onAppear {
@@ -87,8 +87,8 @@ struct ContentView: View {
 
 | Mode               | Behavior                                                                |
 | ------------------ | ----------------------------------------------------------------------- |
-| `testMode = true`  | Shows warnings for network, environment, or URL issues without crashing |
-| `testMode = false` | Critical anomalies terminate the web view load                          |
+| `isProd = true`  | Shows warnings for network, environment, or URL issues without crashing |
+| `isProd = false` | Critical anomalies terminate the web view load                          |
 
 ---
 
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
         let secureWebView = SecureWebView(
             whitelistedURL: URL(string: "https://biometric.vision")!,
             customCSP: csp,
-            testMode: true
+            isProd: true
         )
 
         let hostingController = UIHostingController(rootView: secureWebView)
@@ -163,14 +163,14 @@ WebViewSDK.showWarning("⚠️ Warning: VPN detected in test mode")
 * **SwiftUI**: `/example/web_view_sdk_test_app`
 * **UIKit**: `/example/web_view_sdk_test_app_uikit`
 
-These demonstrate CSP setup, `testMode`, and logging.
+These demonstrate CSP setup, `isProd`, and logging.
 
 ---
 
 ## 🧑‍💻 7. Best Practices
 
 * Only whitelist URLs that your app should load.
-* Use **testMode** in development to show warnings instead of crashing.
+* Use **isProd** in development to show warnings instead of crashing.
 * Always log anomalies for audit and diagnostics.
 * Keep CSP updated to block untrusted sources.
 * Do not disable security checks in production builds.
@@ -263,7 +263,7 @@ struct ContentView: View {
                 SecureWebView(
                     whitelistedURL: url,
                     customCSP: csp,
-                    testMode: true,
+                    isProd: true,
                     onSuccess: { didSucceed in
                         if didSucceed {
                             withAnimation { showToast = true }
