@@ -47,7 +47,7 @@ public struct RuntimeEnvironmentProtection {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class SecureWebViewController : UIKit.UIViewController, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(expectedPackageName: Swift.String, supportedAlternativeStores: [Swift.String] = [], isProd: Swift.Bool = true, apiKey: Swift.String, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(appTeamId: Swift.String, appBundleIds: Swift.String, isProd: Swift.Bool = true, apiKey: Swift.String, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
   #endif
   @_Concurrency.MainActor @preconcurrency @objc override final public func loadView()
   @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, requestMediaCapturePermissionFor origin: WebKit.WKSecurityOrigin, initiatedByFrame frame: WebKit.WKFrameInfo, type: WebKit.WKMediaCaptureType, decisionHandler: @escaping (WebKit.WKPermissionDecision) -> Swift.Void)
@@ -88,7 +88,7 @@ public struct RuntimeEnvironmentProtection {
 }
 @_Concurrency.MainActor @preconcurrency public struct SecureWebView : SwiftUI.UIViewRepresentable {
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(expectedPackageName: Swift.String, supportedAlternativeStores: [Swift.String] = [], isProd: Swift.Bool = true, apiKey: Swift.String, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(appTeamId: Swift.String, appBundleIds: Swift.String, isProd: Swift.Bool = true, apiKey: Swift.String, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
   #endif
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: web_view_sdk.SecureWebView.Context) -> UIKit.UIView
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: web_view_sdk.SecureWebView.Context)

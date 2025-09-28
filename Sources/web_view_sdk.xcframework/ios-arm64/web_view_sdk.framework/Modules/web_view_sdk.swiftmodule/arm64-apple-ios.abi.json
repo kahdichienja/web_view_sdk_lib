@@ -989,7 +989,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(expectedPackageName:supportedAlternativeStores:isProd:apiKey:onSuccess:)",
+            "printedName": "init(appTeamId:appBundleIds:isProd:apiKey:onSuccess:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1005,18 +1005,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sa"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -1060,8 +1051,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
+            "usr": "s:12web_view_sdk23SecureWebViewControllerC9appTeamId0H9BundleIds6isProd6apiKey9onSuccessACSS_SSSbSSySbcSgtcfc",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC9appTeamId0H9BundleIds6isProd6apiKey9onSuccessACSS_SSSbSSySbcSgtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -2467,7 +2458,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(expectedPackageName:supportedAlternativeStores:isProd:apiKey:onSuccess:)",
+            "printedName": "init(appTeamId:appBundleIds:isProd:apiKey:onSuccess:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2483,18 +2474,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sa"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -2538,8 +2520,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk13SecureWebViewV19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
+            "usr": "s:12web_view_sdk13SecureWebViewV9appTeamId0G9BundleIds6isProd6apiKey9onSuccessACSS_SSSbSSySbcSgtcfc",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV9appTeamId0G9BundleIds6isProd6apiKey9onSuccessACSS_SSSbSSySbcSgtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -3215,84 +3197,70 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "StringLiteral",
-      "offset": 635,
+      "offset": 619,
       "length": 21,
       "value": "\"remote.biometric.kz\""
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "StringLiteral",
-      "offset": 700,
+      "offset": 684,
       "length": 35,
       "value": "\"https:\/\/remote.biometric.kz\/flow\/\""
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "StringLiteral",
-      "offset": 790,
+      "offset": 774,
       "length": 55,
       "value": "\"https:\/\/kyc.biometric.kz\/api\/v1\/flows\/session\/create\/\""
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
-      "kind": "Array",
-      "offset": 933,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 952,
+      "offset": 930,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 17329,
+      "offset": 17265,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 17367,
+      "offset": 17303,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "StringLiteral",
-      "offset": 1382,
+      "offset": 1376,
       "length": 21,
       "value": "\"remote.biometric.kz\""
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "StringLiteral",
-      "offset": 1447,
+      "offset": 1441,
       "length": 35,
       "value": "\"https:\/\/remote.biometric.kz\/flow\/\""
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "StringLiteral",
-      "offset": 1537,
+      "offset": 1531,
       "length": 55,
       "value": "\"https:\/\/kyc.biometric.kz\/api\/v1\/flows\/session\/create\/\""
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
-      "kind": "Array",
-      "offset": 1715,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1742,
+      "offset": 1705,
       "length": 4,
       "value": "true"
     }
