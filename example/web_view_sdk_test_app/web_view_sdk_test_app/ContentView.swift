@@ -80,10 +80,12 @@ struct ContentView: View {
                     .foregroundColor(.red)
                     .padding()
             } else if let url = vm.flowURL {
+                ///  url -> for live url after creating session.
+                ///    https://remote.biometric.kz/test -> test url URL(string: "https://remote.biometric.kz/test")!
                 SecureWebView(
                     whitelistedURL: url,
                     customCSP: csp,
-                    testMode: true,
+                    isProd: false,
                     onSuccess: { didSucceed in
                         if didSucceed {
                             withAnimation {
