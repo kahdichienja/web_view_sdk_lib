@@ -14,12 +14,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
         
         // Create SwiftUI SecureWebView
         let secureWebView = SecureWebView(
-            expectedPackageName: "com.example.web_view_sdk_test_app",
-            supportedAlternativeStores: [],
+            appTeamId: "",
+            appBundleIds: "com.example.web_view_sdk_test_app",
             isProd: false,
             apiKey: "Rv7MCdaiaLc5plgOOvmunOfsqNyiHzSTvrYVJ45G7P7XH2Y",
             onSuccess: { didSucceed in
@@ -27,7 +26,6 @@ class ViewController: UIViewController {
                     print("Success")
                 }
             }
-            
         )
         
         // Wrap it in a UIHostingController

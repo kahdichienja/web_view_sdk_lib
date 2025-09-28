@@ -21,8 +21,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             SecureWebView(
-                expectedPackageName: "com.example.web_view_sdk_test_app",
-                supportedAlternativeStores: [],
+                appTeamId: "",
+                appBundleIds: "com.example.web_view_sdk_test_app",
                 isProd: false,
                 apiKey: "Rv7MCdaiaLc5plgOOvmunOfsqNyiHzSTvrYVJ45G7P7XH2Y",
                 onSuccess: { didSucceed in

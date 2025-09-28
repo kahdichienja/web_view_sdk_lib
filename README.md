@@ -66,8 +66,8 @@ struct ContentView: View {
 
     var body: some View {
         SecureWebView(
-            expectedPackageName: "com.example.web_view_sdk_test_app",
-            supportedAlternativeStores: [],
+            appTeamId: "",
+            appBundleIds: "com.example.web_view_sdk_test_app",
             isProd: false,   // ⚠️ Use true in production
             apiKey: "<YOU_API_KEY>",
             onSuccess: { didSucceed in
@@ -112,8 +112,8 @@ class ViewController: UIViewController {
 
 
         let secureWebView = SecureWebView(
-            expectedPackageName: "com.example.web_view_sdk_test_app",
-            supportedAlternativeStores: [],
+            appTeamId: "",
+            appBundleIds: "com.example.web_view_sdk_test_app",
             isProd: false,   // ⚠️ Use true in production
             apiKey: "<YOU_API_KEY>",
             onSuccess: { didSucceed in
@@ -201,8 +201,8 @@ This allows developers to validate integration safely during testing, while enfo
 
 ```swift
 SecureWebView(
-    expectedPackageName: "com.example.web_view_sdk_test_app",
-    supportedAlternativeStores: [],
+    appTeamId: "",
+    appBundleIds: "com.example.web_view_sdk_test_app",
     isProd: false,   // ⚠️ Use true in production
     apiKey: "<YOU_API_KEY>",
     onSuccess: { didSucceed in
@@ -271,8 +271,8 @@ struct ContentView: View {
 
     var body: some View {
         SecureWebView(
-            expectedPackageName: "com.example.web_view_sdk_test_app",
-            supportedAlternativeStores: [],
+            appTeamId: "",
+            appBundleIds: "com.example.web_view_sdk_test_app",
             isProd: false,   // ⚠️ Use true in production
             apiKey: "<YOU_API_KEY>",
             onSuccess: { didSucceed in
