@@ -2249,14 +2249,12 @@
                 "usr": "s:12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_32requestMediaCapturePermissionFor16initiatedByFrame4type15decisionHandlerySo05WKWebF0C_So16WKSecurityOriginCSo11WKFrameInfoCSo07WKMediaJ4TypeVySo20WKPermissionDecisionVctF",
                 "mangledName": "$s12web_view_sdk13SecureWebViewV11CoordinatorC0aF0_32requestMediaCapturePermissionFor16initiatedByFrame4type15decisionHandlerySo05WKWebF0C_So16WKSecurityOriginCSo11WKFrameInfoCSo07WKMediaJ4TypeVySo20WKPermissionDecisionVctF",
                 "moduleName": "web_view_sdk",
-                "intro_iOS": "15.0",
                 "objc_name": "webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:",
                 "declAttributes": [
                   "ObjC",
                   "Preconcurrency",
                   "Custom",
-                  "AccessControl",
-                  "Available"
+                  "AccessControl"
                 ],
                 "funcSelfKind": "NonMutating"
               },
@@ -2751,14 +2749,14 @@
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 766,
+      "offset": 4117,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 7035,
+      "offset": 10538,
       "length": 5,
       "value": "false"
     },
