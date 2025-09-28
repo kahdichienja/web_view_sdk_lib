@@ -18,9 +18,15 @@ class ViewController: UIViewController {
         
         // Create SwiftUI SecureWebView
         let secureWebView = SecureWebView(
-            whitelistedURL: URL(string: "https://biometric.vision")!,
-            customCSP: csp,
-            testMode: true
+            expectedPackageName: "com.example.web_view_sdk_test_app",
+            supportedAlternativeStores: [],
+            isProd: false,
+            apiKey: "Rv7MCdaiaLc5plgOOvmunOfsqNyiHzSTvrYVJ45G7P7XH2Y",
+            onSuccess: { didSucceed in
+                if didSucceed {
+                    print("Success")
+                }
+            }
             
         )
         
