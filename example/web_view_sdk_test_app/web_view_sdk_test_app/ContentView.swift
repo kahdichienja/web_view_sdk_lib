@@ -67,6 +67,7 @@ class KYCViewModel: ObservableObject {
 struct ContentView: View {
     let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
     @StateObject private var vm = KYCViewModel()
+    @State private var showToast = false
 
     var body: some View {
         VStack {
@@ -82,7 +83,20 @@ struct ContentView: View {
                 SecureWebView(
                     whitelistedURL: url,
                     customCSP: csp,
-                    testMode: true
+                    testMode: true,
+                    onSuccess: { didSucceed in
+                        if didSucceed {
+                            withAnimation {
+                                showToast = true
+                            }
+                            // Auto-hide after 5 seconds
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                withAnimation {
+                                    showToast = false
+                                }
+                            }
+                        }
+                    }
                 )
                 .ignoresSafeArea(edges: .all)
             } else {
@@ -94,6 +108,21 @@ struct ContentView: View {
         .task {
             await vm.startFlow()
         }
+        if showToast {
+             VStack {
+                 Spacer()
+                 HStack {
+                     Text("✅ Success!")
+                         .foregroundColor(.white)
+                         .padding(.horizontal, 16)
+                         .padding(.vertical, 12)
+                         .background(Color.green.opacity(0.9))
+                         .cornerRadius(10)
+                 }
+                 .padding(.bottom, 40)
+             }
+             .transition(.move(edge: .bottom).combined(with: .opacity))
+         }
     }
 }
 

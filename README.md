@@ -25,6 +25,12 @@ This guide provides a step-by-step walkthrough for integrating the **WebViewSDK*
 * **Swift Version**: 5+
 * **Dependencies**: None external (pure Swift + WebKit)
 * **Required Features**: Internet access
+* **Permissions Required**:
+
+  * `NSCameraUsageDescription`
+  * `NSMicrophoneUsageDescription`
+
+👉 Add these two keys to your app’s **Info.plist**, otherwise iOS will block camera/microphone access during biometric flows.
 
 ---
 
@@ -171,10 +177,134 @@ These demonstrate CSP setup, `testMode`, and logging.
 
 ---
 
-## 📞 Support
+---
 
-For questions or support, visit: [https://webviewsdk.dev/](https://webviewsdk.dev/)
+## 🎯 8. KYC Flow Example (SwiftUI)
+
+The SDK can be integrated with external KYC/biometric APIs.
+Below is a **complete SwiftUI example** that:
+
+* Creates a KYC session via the `kyc.biometric.kz` API
+* Loads the returned flow into a `SecureWebView`
+* Shows a success **toast/snackbar** on completion
+
+```swift
+import SwiftUI
+import web_view_sdk
+import Foundation
+import Combine
+
+// MARK: - Model
+struct SessionResponse: Codable {
+    let session_id: String
+    let technologies: [String]
+}
+
+// MARK: - Service
+class KYCService {
+    private let endpoint = URL(string: "https://kyc.biometric.kz/api/v1/flows/session/create/")!
+
+    func createSession(apiKey: String) async throws -> URL {
+        var request = URLRequest(url: endpoint)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let body = ["api_key": apiKey]
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let response = try JSONDecoder().decode(SessionResponse.self, from: data)
+
+        let urlString = "https://remote.biometric.kz/flow/\(response.session_id)?web_view=true"
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        return url
+    }
+}
+
+// MARK: - ViewModel
+@MainActor
+class KYCViewModel: ObservableObject {
+    @Published var flowURL: URL?
+    @Published var errorMessage: String?
+    @Published var isLoading: Bool = false
+
+    private let service = KYCService()
+
+    func startFlow() async {
+        isLoading = true
+        defer { isLoading = false }
+
+        do {
+            flowURL = try await service.createSession(
+                apiKey: "YOUR_API_KEY"
+            )
+        } catch {
+            errorMessage = "❌ \(error.localizedDescription)"
+        }
+    }
+}
+
+// MARK: - View
+struct ContentView: View {
+    let csp = "default-src * 'unsafe-inline' 'unsafe-eval';"
+    @StateObject private var vm = KYCViewModel()
+    @State private var showToast = false
+
+    var body: some View {
+        VStack {
+            if vm.isLoading {
+                ProgressView("Creating session…")
+            } else if let error = vm.errorMessage {
+                Text(error)
+                    .foregroundColor(.red)
+            } else if let url = vm.flowURL {
+                SecureWebView(
+                    whitelistedURL: url,
+                    customCSP: csp,
+                    testMode: true,
+                    onSuccess: { didSucceed in
+                        if didSucceed {
+                            withAnimation { showToast = true }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                withAnimation { showToast = false }
+                            }
+                        }
+                    }
+                )
+                .ignoresSafeArea(edges: .all)
+            } else {
+                Text("Preparing session…")
+                    .foregroundColor(.gray)
+            }
+        }
+        .task { await vm.startFlow() }
+
+        if showToast {
+            VStack {
+                Spacer()
+                HStack {
+                    Text("✅ Success!")
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 12)
+                        .background(Color.green.opacity(0.9))
+                        .cornerRadius(10)
+                }
+                .padding(.bottom, 40)
+            }
+            .transition(.move(edge: .bottom).combined(with: .opacity))
+        }
+    }
+}
+```
 
 ---
 
- 
+## 📞 Support
+
+For questions or support, visit: [https://webviewsdk.dev/](https://guide.biometric.kz/en/integrations/flow_webview/)
+
+---
+
