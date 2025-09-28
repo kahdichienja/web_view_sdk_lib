@@ -148,7 +148,7 @@ WebViewSDK automatically validates:
 
 ---
 
-## ⚠️ 5. Security Warnings
+##  Security Warnings
 
 The SDK performs multiple **runtime, network, and environment validations** and raises `SecurityRisk` alerts whenever a potential threat is detected.
 
