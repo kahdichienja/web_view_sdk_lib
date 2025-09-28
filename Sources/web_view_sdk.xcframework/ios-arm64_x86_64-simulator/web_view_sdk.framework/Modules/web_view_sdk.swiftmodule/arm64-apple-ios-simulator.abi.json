@@ -987,10 +987,50 @@
         "printedName": "SecureWebViewController",
         "children": [
           {
-            "kind": "Var",
-            "name": "onSuccess",
-            "printedName": "onSuccess",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(expectedPackageName:supportedAlternativeStores:isProd:apiKey:onSuccess:)",
             "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureWebViewController",
+                "printedName": "web_view_sdk.SecureWebViewController",
+                "usr": "c:@M@web_view_sdk@objc(cs)SecureWebViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
@@ -1015,238 +1055,20 @@
                     ]
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvp",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvp",
+            "declKind": "Constructor",
+            "usr": "s:12web_view_sdk23SecureWebViewControllerC19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
-              "HasInitialValue",
               "Preconcurrency",
               "Custom",
-              "HasStorage",
               "AccessControl"
             ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Swift.Bool) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Swift.Bool) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvg",
-                "mangledName": "$s12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvg",
-                "moduleName": "web_view_sdk",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Swift.Bool) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Swift.Bool) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvs",
-                "mangledName": "$s12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvs",
-                "moduleName": "web_view_sdk",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvM",
-                "mangledName": "$s12web_view_sdk23SecureWebViewControllerC9onSuccessySbcSgvM",
-                "moduleName": "web_view_sdk",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(whitelistedURL:customCSP:isProd:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SecureWebViewController",
-                "printedName": "web_view_sdk.SecureWebViewController",
-                "usr": "c:@M@web_view_sdk@objc(cs)SecureWebViewController"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP6isProdAC10Foundation0I0V_SSSgSbtcfc",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC14whitelistedURL9customCSP6isProdAC10Foundation0I0V_SSSgSbtcfc",
-            "moduleName": "web_view_sdk",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "RawDocComment"
-            ],
             "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(optionalURL:customCSP:isProd:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SecureWebViewController",
-                "printedName": "web_view_sdk.SecureWebViewController",
-                "usr": "c:@M@web_view_sdk@objc(cs)SecureWebViewController"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.URL?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC11optionalURL9customCSP6isProdAC10Foundation0I0VSg_SSSgSbtcfc",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC11optionalURL9customCSP6isProdAC10Foundation0I0VSg_SSSgSbtcfc",
-            "moduleName": "web_view_sdk",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "Convenience",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Convenience"
           },
           {
             "kind": "Function",
@@ -1266,7 +1088,7 @@
             "overriding": true,
             "objc_name": "loadView",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "Preconcurrency",
               "Custom",
@@ -1277,24 +1099,179 @@
           },
           {
             "kind": "Function",
-            "name": "reload",
-            "printedName": "reload()",
+            "name": "webView",
+            "printedName": "webView(_:requestMediaCapturePermissionFor:initiatedByFrame:type:decisionHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKSecurityOrigin",
+                "printedName": "WebKit.WKSecurityOrigin",
+                "usr": "c:objc(cs)WKSecurityOrigin"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKFrameInfo",
+                "printedName": "WebKit.WKFrameInfo",
+                "usr": "c:objc(cs)WKFrameInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKMediaCaptureType",
+                "printedName": "WebKit.WKMediaCaptureType",
+                "usr": "c:@E@WKMediaCaptureType"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WebKit.WKPermissionDecision) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKPermissionDecision",
+                    "printedName": "WebKit.WKPermissionDecision",
+                    "usr": "c:@E@WKPermissionDecision"
+                  }
+                ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:12web_view_sdk23SecureWebViewControllerC6reloadyyF",
-            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC6reloadyyF",
+            "usr": "c:@M@web_view_sdk@objc(cs)SecureWebViewController(im)webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC0aF0_32requestMediaCapturePermissionFor16initiatedByFrame4type15decisionHandlerySo05WKWebF0C_So16WKSecurityOriginCSo11WKFrameInfoCSo07WKMediaJ4TypeVySo20WKPermissionDecisionVctF",
             "moduleName": "web_view_sdk",
+            "objc_name": "webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:",
             "declAttributes": [
+              "Final",
+              "ObjC",
               "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "webView",
+            "printedName": "webView(_:decidePolicyFor:decisionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKNavigationAction",
+                "printedName": "WebKit.WKNavigationAction",
+                "usr": "c:objc(cs)WKNavigationAction"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WebKit.WKNavigationActionPolicy) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKNavigationActionPolicy",
+                    "printedName": "WebKit.WKNavigationActionPolicy",
+                    "usr": "c:@E@WKNavigationActionPolicy"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@web_view_sdk@objc(cs)SecureWebViewController(im)webView:decidePolicyForNavigationAction:decisionHandler:",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So18WKNavigationActionCySo0noI0VctF",
+            "moduleName": "web_view_sdk",
+            "objc_name": "webView:decidePolicyForNavigationAction:decisionHandler:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "webView",
+            "printedName": "webView(_:decidePolicyFor:decisionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKNavigationResponse",
+                "printedName": "WebKit.WKNavigationResponse",
+                "usr": "c:objc(cs)WKNavigationResponse"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WebKit.WKNavigationResponsePolicy) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKNavigationResponsePolicy",
+                    "printedName": "WebKit.WKNavigationResponsePolicy",
+                    "usr": "c:@E@WKNavigationResponsePolicy"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@web_view_sdk@objc(cs)SecureWebViewController(im)webView:decidePolicyForNavigationResponse:decisionHandler:",
+            "mangledName": "$s12web_view_sdk23SecureWebViewControllerC0aF0_15decidePolicyFor15decisionHandlerySo05WKWebF0C_So20WKNavigationResponseCySo0noI0VctF",
+            "moduleName": "web_view_sdk",
+            "objc_name": "webView:decidePolicyForNavigationResponse:decisionHandler:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1362,6 +1339,7 @@
         "declAttributes": [
           "Preconcurrency",
           "Custom",
+          "Final",
           "AccessControl",
           "RawDocComment",
           "ObjC"
@@ -2489,7 +2467,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(whitelistedURL:customCSP:isProd:onSuccess:)",
+            "printedName": "init(expectedPackageName:supportedAlternativeStores:isProd:apiKey:onSuccess:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2499,14 +2477,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
+                "name": "Array",
+                "printedName": "[Swift.String]",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2516,7 +2494,7 @@
                   }
                 ],
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:Sa"
               },
               {
                 "kind": "TypeNominal",
@@ -2524,6 +2502,12 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -2554,95 +2538,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12web_view_sdk13SecureWebViewV14whitelistedURL9customCSP6isProd9onSuccessAC10Foundation0H0V_SSSgSbySbcSgtcfc",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV14whitelistedURL9customCSP6isProd9onSuccessAC10Foundation0H0V_SSSgSbySbcSgtcfc",
-            "moduleName": "web_view_sdk",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(optionalURL:customCSP:isProd:onSuccess:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SecureWebView",
-                "printedName": "web_view_sdk.SecureWebView",
-                "usr": "s:12web_view_sdk13SecureWebViewV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.URL?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.Bool) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Bool) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12web_view_sdk13SecureWebViewV11optionalURL9customCSP6isProd9onSuccessAC10Foundation0H0VSg_SSSgSbySbcSgtcfc",
-            "mangledName": "$s12web_view_sdk13SecureWebViewV11optionalURL9customCSP6isProd9onSuccessAC10Foundation0H0VSg_SSSgSbySbcSgtcfc",
+            "usr": "s:12web_view_sdk13SecureWebViewV19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
+            "mangledName": "$s12web_view_sdk13SecureWebViewV19expectedPackageName26supportedAlternativeStores6isProd6apiKey9onSuccessACSS_SaySSGSbSSySbcSgtcfc",
             "moduleName": "web_view_sdk",
             "declAttributes": [
               "Preconcurrency",
@@ -2971,6 +2868,7 @@
               "Preconcurrency",
               "Custom",
               "AccessControl",
+              "RawDocComment",
               "ObjC"
             ],
             "superclassUsr": "c:objc(cs)NSObject",
@@ -3316,43 +3214,85 @@
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
+      "kind": "StringLiteral",
+      "offset": 635,
+      "length": 21,
+      "value": "\"remote.biometric.kz\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
+      "kind": "StringLiteral",
+      "offset": 700,
+      "length": 35,
+      "value": "\"https:\/\/remote.biometric.kz\/flow\/\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
+      "kind": "StringLiteral",
+      "offset": 790,
+      "length": 55,
+      "value": "\"https:\/\/kyc.biometric.kz\/api\/v1\/flows\/session\/create\/\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
+      "kind": "Array",
+      "offset": 933,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 4804,
+      "offset": 952,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 5176,
+      "offset": 17329,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 12298,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/SecureWebViewUIKit.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12336,
+      "offset": 17367,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1322,
-      "length": 4,
-      "value": "true"
+      "kind": "StringLiteral",
+      "offset": 1382,
+      "length": 21,
+      "value": "\"remote.biometric.kz\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
+      "kind": "StringLiteral",
+      "offset": 1447,
+      "length": 35,
+      "value": "\"https:\/\/remote.biometric.kz\/flow\/\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
+      "kind": "StringLiteral",
+      "offset": 1537,
+      "length": 55,
+      "value": "\"https:\/\/kyc.biometric.kz\/api\/v1\/flows\/session\/create\/\""
+    },
+    {
+      "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
+      "kind": "Array",
+      "offset": 1715,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/agooclinton\/Desktop\/test\/app\/swift\/sdk\/web_view_sdk\/web_view_sdk\/web_view_sdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1850,
+      "offset": 1742,
       "length": 4,
       "value": "true"
     }

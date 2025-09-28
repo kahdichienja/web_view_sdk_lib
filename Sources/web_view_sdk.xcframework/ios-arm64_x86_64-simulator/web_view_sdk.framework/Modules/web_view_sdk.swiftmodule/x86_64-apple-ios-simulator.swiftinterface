@@ -45,16 +45,14 @@ public struct RuntimeEnvironmentProtection {
   #endif
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SecureWebViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency public var onSuccess: ((Swift.Bool) -> Swift.Void)?
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class SecureWebViewController : UIKit.UIViewController, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(whitelistedURL: Foundation.URL, customCSP: Swift.String? = nil, isProd: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public init(expectedPackageName: Swift.String, supportedAlternativeStores: [Swift.String] = [], isProd: Swift.Bool = true, apiKey: Swift.String, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency convenience public init(optionalURL: Foundation.URL? = nil, customCSP: Swift.String? = nil, isProd: Swift.Bool = true)
-  #endif
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func loadView()
-  @_Concurrency.MainActor @preconcurrency public func reload()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func loadView()
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, requestMediaCapturePermissionFor origin: WebKit.WKSecurityOrigin, initiatedByFrame frame: WebKit.WKFrameInfo, type: WebKit.WKMediaCaptureType, decisionHandler: @escaping (WebKit.WKPermissionDecision) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor response: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency public class SecureWebViewContainer : UIKit.UIView {
@@ -90,10 +88,7 @@ public struct RuntimeEnvironmentProtection {
 }
 @_Concurrency.MainActor @preconcurrency public struct SecureWebView : SwiftUI.UIViewRepresentable {
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(whitelistedURL: Foundation.URL, customCSP: Swift.String? = nil, isProd: Swift.Bool = true, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(optionalURL: Foundation.URL? = nil, customCSP: Swift.String? = nil, isProd: Swift.Bool = true, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(expectedPackageName: Swift.String, supportedAlternativeStores: [Swift.String] = [], isProd: Swift.Bool = true, apiKey: Swift.String, onSuccess: ((Swift.Bool) -> Swift.Void)? = nil)
   #endif
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: web_view_sdk.SecureWebView.Context) -> UIKit.UIView
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: UIKit.UIView, context: web_view_sdk.SecureWebView.Context)
