@@ -183,8 +183,8 @@ This allows developers to validate integration safely during testing, while enfo
 
 | Mode               | Behavior                                                                  |
 | ------------------ | ------------------------------------------------------------------------- |
-| `isProd = true`  | Non-blocking warnings are logged and shown to developer via `showWarning` |
-| `isProd = false` | Critical threats terminate load; warnings may still be logged             |
+| `isProd = true`  | Critical threats terminate load; warnings may still be logged  |
+| `isProd = false` | Non-blocking warnings are logged and shown to developer via `showWarning`            |
 
 ---
 
